@@ -1,0 +1,149 @@
+/* Container */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at top, #0D0D0D, #1A1A1A);
+  color: #FFFFFF;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+/* -----------------------
+   Top cards container
+------------------------- */
+.top-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 60px;
+  justify-content: center;
+  flex-wrap: wrap; /* responsive */
+}
+
+/* Left info card */
+.left-card {
+  background: #1A1A1A;
+  border-radius: 20px;
+  padding: 40px 50px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 6px 30px rgba(59, 130, 246, 0.5), 0 0 15px rgba(59, 130, 246, 0.3);
+  border: 1px solid #3B82F6;
+  transition: all 0.4s ease;
+}
+
+.left-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.7), 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.left-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #3B82F6;
+  text-shadow: 0 0 8px #3B82F6;
+}
+
+.left-card p {
+  font-size: 1rem;
+  color: #CCCCCC;
+  line-height: 1.5;
+}
+
+/* Main card (right) */
+.home-card {
+  background: linear-gradient(145deg, #111111, #1F1F1F);
+  border-radius: 25px;
+  padding: 60px 80px;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4), 0 0 20px rgba(59, 130, 246, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.6), 0 0 25px rgba(59, 130, 246, 0.5);
+  filter: brightness(1.1);
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #3B82F6;
+  text-shadow: 0 0 12px #3B82F6, 0 0 20px #2563EB;
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.vibe-btn {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6, #EC4899);
+  color: white;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5), 0 0 10px rgba(236, 72, 153, 0.5);
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.vibe-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.7), 0 0 20px rgba(236, 72, 153, 0.6);
+}
+
+/* -----------------------
+   Feature cards below
+------------------------- */
+/* -----------------------
+   Feature cards below
+------------------------- */
+.features-section {
+  margin-top: 60px;       /* slightly reduced margin */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;              /* smaller gap for multiple cards */
+  width: 80%;
+  max-width: 850px;
+}
+
+.feature {
+  background: #1A1A1A;
+  padding: 20px 25px;     /* smaller padding for compact cards */
+  border-radius: 14px;    /* slightly smaller radius */
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.35), 0 0 10px rgba(59, 130, 246, 0.15); /* lighter shadow */
+  opacity: 0;
+  transform: translateY(30px); /* starting offset for animation */
+  transition: all 0.8s ease;
+  border-left: 3px solid #3B82F6; /* thinner accent line */
+}
+
+.feature.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature h2 {
+  font-size: 1.5rem;      /* slightly smaller title */
+  font-weight: 700;
+  color: #3B82F6;
+  text-shadow: 0 0 4px #3B82F6;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  font-size: 0.95rem;     /* smaller paragraph text */
+  line-height: 1.4;
+  color: #CCCCCC;
+}
